@@ -1,27 +1,42 @@
-import Image from 'next/image';
+import Image from "next/image";
+
 
 const TestimonialSection = () => {
   return (
-    <div className="bg-gray-900 text-white py-20">
-      <div className="max-w-4xl mx-auto px-4 text-center">
-        <h2 className="text-lg uppercase mb-4">Testimonial</h2>
-        <p className="text-3xl md:text-4xl font-semibold mb-6">
+    <section
+    className="text-green-10 section-container"
+    style={{
+      backgroundImage: "url('/testimonial-bg.png')",
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}
+  >
+      <div className="max-w-4xl text-left mb-[100px]">
+        <h2 className="regular-14 uppercase mb-[24px]">Testimonial</h2>
+        <p className="bold-48 md:text-4xl font-semibold mb-[24px]">
           "TrailHive has completely changed the way I explore the outdoors. The
-          personalized trail recommendations and virtual challenges have kept
-          me motivated and engaged with my adventures."
+          personalized trail recommendations and virtual challenges have kept me
+          motivated and engaged with my adventures."
         </p>
-        <p className="text-xl mb-12">- John R.</p>
-        <div className="flex flex-wrap justify-center items-center space-x-4">
-          <Image src="/logos/dell.png" alt="Dell" width={64} height={32} />
-          <Image src="/logos/zendesk.png" alt="Zendesk" width={64} height={32} />
-          <Image src="/logos/rakuten.png" alt="Rakuten" width={64} height={32} />
-          <Image src="/logos/pacific_funds.png" alt="Pacific Funds" width={64} height={32} />
-          <Image src="/logos/ncr.png" alt="NCR" width={64} height={32} />
-          <Image src="/logos/lattice.png" alt="Lattice" width={64} height={32} />
-          <Image src="/logos/ted.png" alt="TED" width={64} height={32} />
-        </div>
+        <p className="bold-24">- John R.</p>
+        
       </div>
-    </div>
+      <div className="flex flex-col justify-center items-center">
+  <p className="text-green-10 regular-20 pb-[50px]">
+    Trusted by teams at over 1,000 of the world’s leading organizations
+  </p>
+  <div className="flex flex-wrap justify-center items-center [gap:60px]">
+    <Image src="/logos/dell.png" alt="Dell" width={62} height={20} />
+    <Image src="/logos/zendesk.png" alt="Zendesk" width={87} height={17} />
+    <Image src="/logos/rakuten.png" alt="Rakuten" width={67} height={21} />
+    <Image src="/logos/pacific_funds.png" alt="Pacific Funds" width={143} height={13} />
+    <Image src="/logos/ncr.png" alt="NCR" width={80} height={24} />
+    <Image src="/logos/lattice.png" alt="Lattice" width={120} height={22} />
+    <Image src="/logos/ted.png" alt="TED" width={54} height={20} />
+  </div>
+</div>
+
+    </section>
   );
 };
 
