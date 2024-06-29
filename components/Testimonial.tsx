@@ -11,9 +11,9 @@ const TestimonialSection = () => {
       backgroundPosition: 'center',
     }}
   >
-      <div className="max-w-4xl text-left mb-[100px]">
-        <h2 className="regular-14 uppercase mb-[24px]">Testimonial</h2>
-        <p className="bold-48 md:text-4xl font-semibold mb-[24px]">
+      <div className="max-w-7xl text-left mb-[100px]">
+        <h2 className="regular-14 uppercase">Testimonial</h2>
+        <p className="max-w-6xl bold-48 font-semibold mt-[24px] mb-[24px] text-left tracking-[.2px]">
           "TrailHive has completely changed the way I explore the outdoors. The
           personalized trail recommendations and virtual challenges have kept me
           motivated and engaged with my adventures."

@@ -6,10 +6,10 @@ import Button from "./Button";
 const Footer = () => {
   return (
     <footer className="section-container bg-green-90 text-green-10 py-12">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row justify-between items-center mb-8 lg:mb-16">
-          <div className="flex items-center mb-4 lg:mb-0">
-            <Link href="/" className="flex items-center">
+      <div className="w-full">
+        <div className="flex flex-col lg:flex-row justify-between mb-[80px] lg:mb-16">
+          <div className="flex flex-col">
+            <Link href="/" className="flex">
               <Image src="/logo-green.svg" alt="logo" width={33} height={28} />
               <span className="text-green-10 font-semibold text-[32px] ml-2">
                 TrailHive
@@ -18,10 +18,9 @@ const Footer = () => {
           </div>
 
           <div className="w-full lg:w-1/3 flex flex-col lg:flex-row justify-between items-start mb-8 lg:mb-0">
-            {/* <div className="w-full lg:w-1/3 flex flex-col lg:flex-row justify-between items-start mb-8 lg:mb-0"> */}
             <div className="w-full lg:w-1/2">
-              <h3 className="medium-16 mb-4">App</h3>
-              <ul className="regular-14">
+              <h3 className="light-16 mb-4">App</h3>
+              <ul className="light-14">
                 <li className="mb-2">
                   <a href="#" className="hover:underline">
                     Features
@@ -49,13 +48,10 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            {/* </div> */}
 
-            {/* Company Section */}
-            {/* <div className="w-full lg:w-1/3 flex flex-col lg:flex-row justify-between items-start"> */}
             <div className="w-full lg:w-1/2">
-              <h3 className="medium-16 mb-4">Company</h3>
-              <ul className="regular-14">
+              <h3 className="light-16 mb-4">Company</h3>
+              <ul className="light-14">
                 <li className="mb-2">
                   <a href="#" className="hover:underline">
                     About
@@ -82,50 +78,54 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
-              {/* </div> */}
             </div>
           </div>
-          <div className="w-full lg:w-1/3 lg:flex lg:justify-between lg:items-center">
-            <div className="w-full lg:w-2/3 flex flex-col lg:flex-row justify-between items-start">
-              <form className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/3 flex flex-col pb-[24px]">
+            <div className="w-full flex flex-wrap items-start">
+              <div className="flex-grow mr-2 border-b border-gray-300">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="p-2 mb-4 lg:mr-4 text-green-10 bg-green-90"
+                  className="w-full p-[10px] placeholder-green-10 bg-green-90 light-12"
                 />
-              </form>
-              <div className="w-full lg:w-1/2">
-      <Button 
-            type="button"
-            title="Subscribe"
-            variant="btn_inverted"
-          />
-      </div>
-
-              <p className="border-t border-gray-300 text-sm mt-4">
-                By subscribing you agree with our{" "}
-                <a href="#" className="underline">
-                  Privacy Policy
-                </a>
-              </p>
+              </div>
+              <div className="light-16">
+              <Button
+                type="button"
+                title="Subscribe"
+                variant="btn_inverted"
+                className="light-16"
+              />
+              </div>
+              
+            </div>
+            <div className="w-full light-12 mt-[24px]">
+              By subscribing you agree with our {""}
+              <a href="#" className="underline">
+                Privacy Policy
+              </a>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-300 pt-4 flex flex-col lg:flex-row justify-between items-center mt-8 lg:mt-0">
-          <p className="text-sm">&copy; 2023 TrailHive. All rights reserved.</p>
-          <div className="flex space-x-4 mt-4 lg:mt-0">
-            <a href="#" className="text-sm hover:underline">
+          
+          <div className="flex flex-row space-x-8">
+          <div className="light-14">&copy; 2023 TrailHive. All rights reserved.</div>
+          <div className="light-14 flex space-x-8 mt-4 lg:mt-0">
+            <a href="#" className=" underline">
               Privacy Policy
             </a>
-            <a href="#" className="text-sm hover:underline">
+            <a href="#" className="underline">
               Terms of Service
             </a>
-            <a href="#" className="text-sm hover:underline">
+            <a href="#" className="underline">
               Cookies Settings
             </a>
           </div>
-          <div className="flex space-x-4 mt-4 lg:mt-0">
+          </div>
+          
+          <div className="flex space-x-3 mt-4 lg:mt-0 h-[24px]">
             <a href="#" className="w-6 h-6">
               <Image
                 src="/icons/facebook.svg"
@@ -158,7 +158,9 @@ const Footer = () => {
                 height={24}
               />
             </a>
+          
           </div>
+          
         </div>
       </div>
     </footer>

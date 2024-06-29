@@ -30,7 +30,7 @@ const Features = () => {
         <div className="flex flex-col md:flex-row justify-between items-start">
           <div className="md:w-1/4 mb-8 md:mb-0">
             <h2 className="regular-14 uppercase mb-4">FEATURES</h2>
-            <h2 className="text-[38px] font-bold text-gray-90 mb-4">
+            <h2 className="text-[38px] semibold-38 text-green-90 mb-4">
               Stay Active
               <br />
               and Healthy
@@ -39,20 +39,20 @@ const Features = () => {
               Learn more
             </button>
           </div>
-          <div className="md:w-3/4 flex justify-center space-x-8">
+          <div className="w-full flex flex-grow items-start md:w-3/4 justify-center space-x-[80px]">
             {features.map((feature, index) => (
-              <div key={index} className="pr-[80px]">
+              <div key={index} className="">
                 <Image
                   src={feature.image}
                   alt={feature.title}
                   width={311}
                   height={240}
-                  className="rounded-lg mb-4"
+                  className="rounded-[20px] mb-[16px]"
                 />
-                <h3 className="regular-16 text-green-90 mb-2">
+                <h3 className="semibold-16 text-green-90 mb-[10px]">
                   {feature.title}
                 </h3>
-                <p className="regular-16 text-green-90">{feature.description}</p>
+                <p className="regular-14 text-green-90 text-left">{feature.description}</p>
               </div>
             ))}
           </div>
