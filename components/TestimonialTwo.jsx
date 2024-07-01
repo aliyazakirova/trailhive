@@ -12,7 +12,7 @@ const TestimonialSection = () => {
   >
       <div className="max-w-7xl text-left mb-[32px]">
         <h2 className="regular-14 uppercase">Testimonial</h2>
-        <p className="max-w-3xl bold-48 mb-[24px] mt-[24px] text-left tracking-[.32px]">
+        <p className="max-w-3xl bold-48 my-[24px] text-left tracking-[.32px]">
         "I love the social networking aspect of TrailHive. It's great to connect with other hikers and bikers and plan group events together."
         </p>
         <p className="bold-24">- Sara L.</p>

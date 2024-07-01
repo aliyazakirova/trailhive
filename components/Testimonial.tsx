@@ -4,7 +4,7 @@ import Image from "next/image";
 const TestimonialSection = () => {
   return (
     <section
-    className="text-green-10 section-container"
+    className="text-green-10 section-container bg-green-90"
     style={{
       backgroundImage: "url('/testimonial-bg.png')",
       backgroundSize: 'cover',
@@ -13,7 +13,7 @@ const TestimonialSection = () => {
   >
       <div className="max-w-7xl text-left mb-[100px]">
         <h2 className="regular-14 uppercase">Testimonial</h2>
-        <p className="max-w-6xl bold-48 font-semibold mt-[24px] mb-[24px] text-left tracking-[.2px]">
+        <p className="max-w-6xl bold-48 font-semibold my-[24px] text-left tracking-[.2px]">
           "TrailHive has completely changed the way I explore the outdoors. The
           personalized trail recommendations and virtual challenges have kept me
           motivated and engaged with my adventures."
