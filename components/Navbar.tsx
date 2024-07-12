@@ -6,9 +6,9 @@ import Button from './Button';
 const Navbar = () => {
   return (
     <div className="bg-green-90 ">
-      <div className="bg-green-10 rounded-full shadow-md w-full overflow-hidden">
-        <nav className="w-full rounded-full flex justify-between items-center h-16 padding-container">
-          <div className="flex items-center space-x-2 lg:space-x-8">
+      <div className="bg-green-10 rounded-[40px] shadow-md w-full overflow-hidden">
+        <nav className="w-full flex justify-between items-center h-16 px-6 lg:px-20">
+          <div className="flex items-center">
             <Link href="/">
               <Image src="/Vector.svg" alt="logo" width={23} height={20} />
             </Link>
@@ -41,12 +41,14 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-            <div className="flex space-x-4">
+            <div className="flex space-x-8">
               <Button 
                 type="button"
                 title="Contact us"
                 variant="btn_white"
               />
+              </div>
+              <div className="flex space-x-8">
               <Button 
                 type="button"
                 title="Download the app"

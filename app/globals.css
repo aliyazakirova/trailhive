@@ -26,7 +26,7 @@ body {
     @apply  border-green-10 bg-green-90 px-8 py-3 text-green-10
   }
   .padding-container {
-    @apply px-6 lg:px-20;
+    @apply p-[30px] lg:py-[64px] lg:px-[120px];
   }
   .section-container {
     @apply px-7 lg:px-[120px] py-[80px];
