@@ -25,7 +25,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="bg-green-90">
+    <section id="features" className="bg-green-90">
       <div className="bg-green-10 rounded-[40px]">
         <div className="mx-auto section-container">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
@@ -37,11 +37,13 @@ const Features = () => {
                   <br />
                   and Healthy
                 </h2>
+                <div className="flex justify-center lg:justify-start">
                 <Button 
                 type="button"
                 title="Learn more"
                 variant="btn_dark_green"
               />
+                </div>
               </div>
             </div>
             {features.map((feature, index) => (

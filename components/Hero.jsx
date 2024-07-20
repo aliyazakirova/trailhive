@@ -2,6 +2,7 @@ import Image from "next/image";
 import heroImage from "../public/hero_img.png";
 import Button from "./Button";
 
+
 const Hero = () => {
   return (
     <section className="bg-green-90 relative overflow-hidden">
