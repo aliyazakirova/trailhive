@@ -42,7 +42,7 @@ const TestimonialTwoSection = () => {
           initial="hidden"
           whileInView="visible"
           className="max-w-3xl bold-48 my-[24px] text-center lg:text-left tracking-[.32px]">
-          &quot;I love the social networking aspect of TrailHive. It's great to
+          &quot;I love the social networking aspect of TrailHive. It&apos;s great to
           connect with other hikers and bikers and plan group events together.&quot;
         </motion.p>
         <motion.p

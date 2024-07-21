@@ -11,7 +11,6 @@ type ButtonProps = {
   full?: boolean;
 }
 
-// ForwardRef with proper typing
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ type, title, icon, variant, full }, ref) => {
   return (
     <button

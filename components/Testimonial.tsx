@@ -60,7 +60,7 @@ const TestimonialSection = () => {
           initial="hidden"
           whileInView="visible"
           className="text-center text-green-10 regular-20 pb-[50px] ">
-          Trusted by teams at over 1,000 of the world’s leading organizations
+          Trusted by teams at over 1,000 of the world&apos;s leading organizations
         </motion.p>
         <motion.div 
         custom={2}
