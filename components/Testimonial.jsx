@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const textAnimation = {
   hidden: {
@@ -19,9 +19,9 @@ const textAnimation = {
 const TestimonialSection = () => {
   return (
     <motion.section
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true }} 
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }} 
       className="text-green-10 section-container bg-green-90"
       style={{
         backgroundImage: "url('/testimonial-bg.png')",
@@ -47,11 +47,11 @@ const TestimonialSection = () => {
           motivated and engaged with my adventures.&quot;
         </motion.p>
         <motion.p
-        custom={2}
-        variants={textAnimation}
-        initial="hidden"
-        whileInView="visible"
-        className="bold-24">- John R.</motion.p>
+          custom={2}
+          variants={textAnimation}
+          initial="hidden"
+          whileInView="visible"
+          className="bold-24">- John R.</motion.p>
       </div>
       <div className="flex flex-col justify-center items-center">
         <motion.p 
@@ -63,11 +63,11 @@ const TestimonialSection = () => {
           Trusted by teams at over 1,000 of the world&apos;s leading organizations
         </motion.p>
         <motion.div 
-        custom={2}
-        variants={textAnimation}
-        initial="hidden"
-        whileInView="visible"
-        className="flex flex-wrap justify-center items-center [gap:60px]">
+          custom={2}
+          variants={textAnimation}
+          initial="hidden"
+          whileInView="visible"
+          className="flex flex-wrap justify-center items-center [gap:60px]">
           <Image src="/logos/dell.png" alt="Dell" width={62} height={20} />
           <Image
             src="/logos/zendesk.png"
