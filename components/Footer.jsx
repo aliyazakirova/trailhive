@@ -227,5 +227,5 @@ const Footer = () => {
     </footer>
   );
 };
-MyComponent.displayName = 'Footer';
+
 export default Footer;
