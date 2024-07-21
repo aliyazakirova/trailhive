@@ -11,6 +11,7 @@ const Navbar = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+    console.log("Mobile menu state toggled:", !isMobileMenuOpen);
   };
 
   return (
@@ -25,7 +26,7 @@ const Navbar = () => {
           </div>
 
           <div className="lg:hidden flex items-center ml-auto">
-            <button onClick={toggleMobileMenu} className="text-gray-900">
+            <button onClick={toggleMobileMenu} className="text-gray-900" id="mobile-menu-button">
               <svg
                 className="w-6 h-6"
                 fill="none"
