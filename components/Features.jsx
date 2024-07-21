@@ -132,5 +132,6 @@ const Features = () => {
     </section>
   );
 };
+MyComponent.displayName = 'Features';
 
 export default Features;
