@@ -27,6 +27,9 @@ const FeatureItem = forwardRef(({ image, title, description }, ref) => (
   </div>
 ));
 
+// Set displayName for FeatureItem
+FeatureItem.displayName = 'FeatureItem';
+
 const MFeatureItem = motion(FeatureItem);
 
 const textAnimation = {
@@ -132,6 +135,5 @@ const Features = () => {
     </section>
   );
 };
-MyComponent.displayName = 'Features';
 
 export default Features;
