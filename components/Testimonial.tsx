@@ -42,9 +42,9 @@ const TestimonialSection = () => {
           initial="hidden"
           whileInView="visible"
           className="max-w-6xl bold-48 font-semibold my-[24px] text-center lg:text-left tracking-[.2px]">
-          "TrailHive has completely changed the way I explore the outdoors. The
+          &quot;TrailHive has completely changed the way I explore the outdoors. The
           personalized trail recommendations and virtual challenges have kept me
-          motivated and engaged with my adventures."
+          motivated and engaged with my adventures.&quot;
         </motion.p>
         <motion.p
         custom={2}

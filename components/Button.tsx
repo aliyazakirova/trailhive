@@ -24,5 +24,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ type, title, icon, 
     </button>
   );
 });
+Button.displayName = 'Button';
 
 export default motion(Button);
