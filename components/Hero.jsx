@@ -6,16 +6,33 @@ import MButton from "./Button";
 import { motion } from "framer-motion";
 import React from "react";
 
-// Define animation variants
 const textAnimation = {
   hidden: {
-    x: -100,
     opacity: 0,
   },
   visible: (custom) => ({
-    x: 0,
     opacity: 1,
-    transition: { delay: custom * 0.2 },
+    transition: { 
+      delay: custom * 0.2, 
+      duration: 1,
+      ease: "easeInOut" 
+    },
+  }),
+};
+
+const imageAnimation = {
+  hidden: {
+    opacity: 0,
+    y: 50,
+  },
+  visible: (custom) => ({
+    opacity: 1,
+    y: 0,
+    transition: { 
+      delay: custom * 0.2, 
+      duration: 1,
+      ease: "easeInOut" 
+    },
   }),
 };
 
@@ -24,7 +41,7 @@ const Hero = () => {
     <motion.section
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true }} // Ensures animation triggers once when in view
+      viewport={{ once: true }} 
       className="bg-green-90 relative overflow-hidden"
     >
       <div className="max-container flex flex-col lg:flex-row items-center lg:space-x-[80px] padding-container">
@@ -68,13 +85,19 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        <div className="lg:w-1/2 mt-8 lg:mt-0 flexCenter justify-center">
+        <motion.div
+          className="lg:w-1/2 mt-8 lg:mt-0 flexCenter justify-center"
+          initial="hidden"
+          whileInView="visible"
+          variants={imageAnimation}
+          custom={4}
+        >
           <Image
             src={heroImage}
             alt="Hiking"
             className="rounded-[20px] shadow-lg"
           />
-        </div>
+        </motion.div>
       </div>
       <div className="hero-map"></div>
     </motion.section>

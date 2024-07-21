@@ -1,8 +1,27 @@
+"use client";
 import Image from "next/image";
+import {motion} from 'framer-motion';
+
+const textAnimation = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: (custom) => ({
+    opacity: 1,
+    transition: { 
+      delay: custom * 0.2, 
+      duration: 1,
+      ease: "easeOut" 
+    },
+  }),
+};
 
 const TestimonialSection = () => {
   return (
-    <section
+    <motion.section
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }} 
       className="text-green-10 section-container bg-green-90"
       style={{
         backgroundImage: "url('/testimonial-bg.png')",
@@ -11,19 +30,44 @@ const TestimonialSection = () => {
       }}
     >
       <div className="text-center lg:text-left max-w-7xl mb-[80px] lg:mb-[100px]">
-        <h2 className="regular-14 uppercase">Testimonial</h2>
-        <p className="max-w-6xl bold-48 font-semibold my-[24px] text-center lg:text-left tracking-[.2px]">
+        <motion.h2               
+          custom={1}
+          variants={textAnimation}
+          initial="hidden"
+          whileInView="visible"
+          className="regular-14 uppercase">Testimonial</motion.h2>
+        <motion.p 
+          custom={2}
+          variants={textAnimation}
+          initial="hidden"
+          whileInView="visible"
+          className="max-w-6xl bold-48 font-semibold my-[24px] text-center lg:text-left tracking-[.2px]">
           "TrailHive has completely changed the way I explore the outdoors. The
           personalized trail recommendations and virtual challenges have kept me
           motivated and engaged with my adventures."
-        </p>
-        <p className="bold-24">- John R.</p>
+        </motion.p>
+        <motion.p
+        custom={2}
+        variants={textAnimation}
+        initial="hidden"
+        whileInView="visible"
+        className="bold-24">- John R.</motion.p>
       </div>
       <div className="flex flex-col justify-center items-center">
-        <p className="text-center text-green-10 regular-20 pb-[50px] ">
+        <motion.p 
+          custom={2}
+          variants={textAnimation}
+          initial="hidden"
+          whileInView="visible"
+          className="text-center text-green-10 regular-20 pb-[50px] ">
           Trusted by teams at over 1,000 of the world’s leading organizations
-        </p>
-        <div className="flex flex-wrap justify-center items-center [gap:60px]">
+        </motion.p>
+        <motion.div 
+        custom={2}
+        variants={textAnimation}
+        initial="hidden"
+        whileInView="visible"
+        className="flex flex-wrap justify-center items-center [gap:60px]">
           <Image src="/logos/dell.png" alt="Dell" width={62} height={20} />
           <Image
             src="/logos/zendesk.png"
@@ -51,9 +95,9 @@ const TestimonialSection = () => {
             height={22}
           />
           <Image src="/logos/ted.png" alt="TED" width={54} height={20} />
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
