@@ -5,13 +5,22 @@ import { NAV_LINKS } from '@/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import Button from './Button';
+import Modal from './Modal';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-    console.log("Mobile menu state toggled:", !isMobileMenuOpen);
+  };
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -54,7 +63,7 @@ const Navbar = () => {
               ))}
             </ul>
             <div className="flex space-x-8">
-              <Button 
+              <Button onClick={openModal}
                 type="button"
                 title="Contact us"
                 variant="btn_white"
@@ -80,7 +89,7 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="flex flex-col space-y-4 p-4">
-          <Button 
+          <Button onClick={openModal}
             type="button"
             title="Contact us"
             variant="btn_white"
@@ -92,6 +101,7 @@ const Navbar = () => {
           />
         </div>
       </div>
+      <Modal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 }
