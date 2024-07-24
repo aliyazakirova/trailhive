@@ -12,39 +12,14 @@ const Modal = ({ isOpen, onClose }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = {
-      parent: { database_id: "a6f42c17d6eb4c7eb65cf3fe29f0ad2e" },
-      properties: {
-        Name: {
-          title: [
-            {
-              text: {
-                content: name,
-              },
-            },
-          ],
-        },
-        Phone: {
-          rich_text: [
-            {
-              text: {
-                content: phoneNumber,
-              },
-            },
-          ],
-        },
-      },
-    };
 
     try {
-      const response = await fetch("https://api.notion.com/v1/pages", {
+      const response = await fetch("/api/submitForm", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer secret_K5gF4HY3ifqy6k6T9FYnPVYtYQkUSLQ1wiXfqcICFYT`,
-          "Notion-Version": "2022-06-28",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ name, phoneNumber }),
       });
 
       if (response.ok) {
@@ -52,7 +27,6 @@ const Modal = ({ isOpen, onClose }) => {
         onClose();
         alert("Submission successful!");
       } else {
-        // Handle error
         const errorData = await response.json();
         console.error("Error:", errorData);
         alert("Submission failed!");
