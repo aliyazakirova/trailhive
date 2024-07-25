@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TrailHive
+
+![TrailHive](https://trailhive.vercel.app/favicon.ico)
+
+## Overview
+
+Welcome to TrailHive, a modern and responsive website built using **Next.js**, **Tailwind CSS**, and **Framer Motion**. This project features smooth animations, a sleek design, and a modal for collecting user information, which is then stored in a **Notion** database.
+
+## Live Demo
+
+Check out the live demo: [TrailHive](https://trailhive.vercel.app/)
+
+## Background
+
+This project began with a Figma file I discovered in the Figma community:
+
+[SaaS, Nature Company — Webflow Landing Page Design](<https://www.figma.com/design/1z7V1a67smsASzZWGPVpp5/SaaS%2C-Nature-Company-%E2%80%94-Webflow-Landing-Page-Design-(Community)?node-id=1-1263&t=Isdrdm2nB6NHFxbM-0>)
+
+I aimed to recreate the desktop design as pixel-perfect as possible. Since the Figma file did not include tablet and mobile versions, I developed the responsive design myself. I also added animations to enhance the user experience and implemented a modal to collect user information, which is sent to Notion.
+
+## Features
+
+- **Next.js**: Server-side rendering and static site generation for improved performance.
+- **Tailwind CSS**: Utility-first CSS framework for rapid and flexible UI development.
+- **Framer Motion**: Advanced animations and transitions for a dynamic user experience.
+- **Notion**: Database integration for storing and managing user information collected through the modal.
 
 ## Getting Started
 
-First, run the development server:
+To get a copy of the project running on your local machine, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Node.js (v14 or higher)
+- npm or yarn
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. **Clone the repository:**
 
-## Learn More
+   ```bash
+   git clone https://github.com/yourusername/trailhive.git
+   cd trailhive
 
-To learn more about Next.js, take a look at the following resources:
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install dependencies:**
+   npm install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. **Set up Notion integration:**
 
-## Deploy on Vercel
+Create a Notion database to store user information.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Obtain Notion API credentials and database ID.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Create a .env file in the root directory and add the following environment variables:
+
+NOTION_API_KEY=your_notion_api_key
+NOTION_DATABASE_ID=your_notion_database_id
+Run the development server: npm run dev
+
+Open http://localhost:3000 in your browser to see the project in action.
+
+## Usage
+
+Animations and Transitions
+TrailHive uses Framer Motion for smooth animations and transitions. You can customize these animations in the respective components to match your design preferences.
+
+## Tailwind CSS
+
+The project is styled with Tailwind CSS. You can extend or modify existing styles in the tailwind.config.js file and add custom CSS classes in the styles directory.
+
+## Form Submission
+
+The site features a modal for collecting user information and storing it in a Notion database. Ensure your Notion credentials and database configuration are correctly set in the .env.local file.
