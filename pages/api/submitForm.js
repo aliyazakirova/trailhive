@@ -27,11 +27,9 @@ export default async function handler(req, res) {
               ],
             },
             'Phone Number': {
-              rich_text: [
+              multi_select: [
                 {
-                  text: {
-                    content: phoneNumber,
-                  },
+                  name: phoneNumber,
                 },
               ],
             },
