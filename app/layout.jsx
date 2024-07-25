@@ -14,8 +14,15 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{metadata.title || "Default Title"}</title>
-        <meta name="description" content={metadata.description || "Default Description"} />
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+        <meta property="og:image" content="https://trailhive.vercel.app/images/og-image.jpg" />
+        <meta property="og:url" content="https://trailhive.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="TrailHive" />
       </head>
       <body>
         <Navbar />
