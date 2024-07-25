@@ -23,7 +23,6 @@ const Modal = ({ isOpen, onClose }) => {
       });
 
       if (response.ok) {
-        // Handle success (e.g., close modal, show success message)
         onClose();
         alert("Submission successful!");
       } else {

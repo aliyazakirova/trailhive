@@ -1,11 +1,13 @@
+import { config } from 'dotenv';
+config();
+
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { name, phoneNumber } = req.body;
 
     try {
-      
-      const notionToken = 'secret_K5gF4HY3ifqy6k6T9FYnPVYtYQkUSLQ1wiXfqcICFYT';
-      const notionDatabaseId = 'a6f42c17d6eb4c7eb65cf3fe29f0ad2e';
+      const notionToken = process.env.NOTION_TOKEN;
+      const notionDatabaseId = process.env.NOTION_DATABASE_ID;
 
       const response = await fetch(`https://api.notion.com/v1/pages`, {
         method: 'POST',
